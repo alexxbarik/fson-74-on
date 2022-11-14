@@ -236,3 +236,24 @@ line-height: 1.67;
 letter-spacing: 0.02em;
 color: #9DA4BD;
 }
+/* FOOTER */
+.footer {
+}
+.footer-copy {
+font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+letter-spacing: 0.2em;
+color: #9DA4BD;
+}
+.footer-links {
+font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+letter-spacing: 0.2em;
+color: #303030;
+}
+.footer-links:hover,
+.footer-links:focus {
+    color: var(--accent-color);
+}
