@@ -19,7 +19,7 @@ img{
     display: block;
 }
 
-.body {
+body {
     font-family: "Open Sans", "sans-serif";
 }
 /* УТИЛІТАРНИІ КЛАСИ */
@@ -43,6 +43,11 @@ img{
     line-height: 1.33;
     letter-spacing: 0.09em;
     text-transform: uppercase;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    height: 40px;
+    min-width: 160px;
+    background-color: transparent;
 }
 .btn:hover,
 .btn:focus {
@@ -68,9 +73,17 @@ letter-spacing: 0.02em;
 header {
     background-color: gray;
 }
+header .container{
+    display: flex;
+    align-items: center;
+}
+.header-list{
+    display: flex;
+}
 .header-logo{
 padding: 32px 0;
 display: block;
+margin-right: 130px;
 }
 
 .header-link {
@@ -80,9 +93,18 @@ display: block;
     letter-spacing: 0.1em;
     color: var(--primary-link-color);
 }
+/* .header-list > li:not(:last-child){
+    margin-right: 30px;
+} */
+.header-list li + li {
+    margin-left: 30px;
+}
 .header-link:hover,
 .header-link:focus {
     color: #FF6C00;
+}
+.header-contact{
+    margin-left: auto;
 }
 
 .header-tel {
@@ -93,7 +115,13 @@ display: block;
     color: var(--primary-link-color);
 }
 .header-btn {
+    margin-left: 40px;
 color: #FFFFFF;  
+border: 1px solid var(--accent-color);
+border-radius: 25px;
+height: 40px;
+min-width: 160px;
+background-color: transparent;
 }
 .pre-title {
     font-weight: 600;
@@ -113,8 +141,15 @@ text-transform: uppercase;
 .hero {
     background-color: #737373;
 }
+.hero-list{
+    width: 100px;
+}
+.hero .container{
+    display: flex;
+}
 .hero-right{
     padding: 184px 526px 208px 100px;
+    flex-grow: 1;
 }
 .hero-pre-title {
 color: rgba(157, 164, 189, 0.6);
@@ -147,9 +182,27 @@ color: #303030;
 .about{
     padding: 120px 0;
 }
+.about .container{
+    display: flex;
+}
+.list-about{
+    display: flex;
+}
+.about-wrap{
+    margin-left: 30px;
+}
+.about-items:not(:last-child){
+    margin-right: 30px;
+}
 .about-pre-title {
 color: var(--primari-header-color);
 margin-bottom: var(--main-margin);   
+}
+.title{
+    font-family: "Raleway" sans-serif;
+    font-size: 42px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
 }
 .about-title {
 color: var(--primari-header-color);
@@ -182,12 +235,23 @@ color: var(--primari-header-color);
     color: var(--second-header-color);
     margin-bottom: 44px;
 }
+
+.prices-list-wrap{
+    display: flex;
+    gap: 30px;
+}
 .prices-list{
     border: 1px solid #000;
     padding: 30px 20px;
+    flex-grow: 1;
 }
 .prices-items{
     margin-bottom: var(--main-margin);
+    display: flex;
+    justify-content: space-between;
+}
+.prices-items:last-child{
+    margin-bottom: 0px;
 }
 .prices-elements {
     font-size: 18px;
@@ -204,6 +268,17 @@ color: var(--primari-header-color);
 /* BENEFITS */
 .benefits{
     padding: 120px 0;
+}
+.benefits-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px;
+}
+.benefits-items:nth-child(2n+1){
+    margin-right: 30px;
+}
+.benefits-items:nth-child(2n){
+    margin-top: 30px;
 }
 .benefits-items{
     background-color: #f7f7f7;
@@ -254,6 +329,15 @@ color: #555555;
     color: var(--primari-header-color);
     margin-bottom: 44px;
 }
+.barbers-list{
+    display: flex;
+}
+.barbers-items:not(:last-child){
+    margin-right: 30px;
+}
+.barbers-items{
+    width: calc((100% - 60px) / 3);
+}
 
 .barbers-name {
 font-weight: 400;
@@ -276,6 +360,16 @@ color: var(--accent-color);
 .gallery{
     padding: 120px 0;
 }
+.gallery-list{
+    display: flex;
+}
+.gallery-item{
+    width: calc((100% - 120px) / 4);
+    margin-right: 30px;
+}
+.gallery-item:last-child{
+    margin-right: 0;
+}
 .gallery-pre-title{
     color: var(--primari-header-color);
     margin-bottom: 44px;
@@ -289,6 +383,7 @@ color: var(--accent-color);
 .contacts-title {
     color: var(--second-header-color);
 }
+
 .contacts-links {
 font-style: normal;
 font-weight: 400;
