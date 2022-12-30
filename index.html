@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -26,7 +29,7 @@
     </nav>
     <div class="header-contact">
         <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-        <button type="button" class="header-btn btn">Online-booking</button>
+        <button type="button" class="header-btn btn" data-modal-open>Online-booking</button>
     </div>
     </div>
     </header>
@@ -272,9 +275,63 @@
         </ul>
     </div> 
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close" data-modal-close>
+                <svg width="20" height="20" class="barbers-soc-icons">
+                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+            </button>
+            <p class="modal-heading">Contact us</p>
+            <form action="">
+                <div class="modal-input-group">
+                    <label for="name">name</label>
+                    <input type="text" class="modal-input" placeholder="jack daniels" name="name" id="name" required>
+                </div>
+                <div class="modal-input-group">
+                    <label for="email">email</label>
+                    <input type="email" class="modal-input" placeholder="test@test.com" name="name" id="email" required>
+                </div>
+                <div class="modal-input-group">
+                    <label for="tel">phone number</label>
+                    <input type="tel" class="modal-input" placeholder="+38(099)999-99-99" name="tel" id="tel" required>
+                </div>
+                <fieldset>
+                    <legend>time of day</legend>
+                    <input type="radio" name="time of day" id="during the day" value="during the day" checked>
+                    <label for="during the day">during the day</label>
+                    <input type="radio" name="time of day" id="during the evening" value="during the evening">
+                    <label for="small">during the evening</label>
+                </fieldset>
+                <fieldset>
+                    <legend>services</legend>
+                    <input type="checkbox" name="services" id="men`s haircu" value="men`s haircu" checked>
+                    <label for="men`s haircu">Men`s haircut</label>
+                    <input type="checkbox" name="services" id="beard trim" value="beard trim" checked>
+                    <label for="beard trim">Beard trim</label>
+                    <input type="checkbox" name="services" id="straight razor shave" value="straight razor shave" checked>
+                    <label for="straight razor shave">Straight razor shave</label>
+                </fieldset>
+                <div class="modal-input-group">
+                    <label for="city">your barber</label>
+                   <select name="city" id="city" class="modal-select">
+                    <option value="John Smith">John Smith</option>
+                    <option value="Michele Doe">Michele Doe</option>
+                    <option value="Alan Black">Alan Black</option>
+                   </select>
+                </div>
+                <div class="modal-input-group">
+                    <label for="comment">your comment</label>
+                   <textarea name="comment" id="comment" class="modal-text" placeholder="your comment"></textarea>
+                </div>
+                <button type="submit" class="modal-submit btn">send</button>
+            </form>
+        </div>
+    </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
+      <script src="./js/modal.js"></script>
 </body>
 </html>
