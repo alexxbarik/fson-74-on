@@ -2,7 +2,11 @@
 @import "./base/reset";
 @import "./base/common.scss";
 @import "./base/visually-hidden";
+
 @import "./base/utils/vars";
+@import "./base/utils/placeholder";
+@import "./base/utils/mixin";
+
 @import "./components/container";
 @import "./components/btn";
 @import "./components/pre-title";
