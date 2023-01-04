@@ -18,7 +18,8 @@
     <header class="header">
         <div class="container">
     <a href="" class="logo header__logo">
-        <img src="./img/Logo.svg" alt="logo">
+        <svg width="69" height="56" class="">
+            <use href="./img/symbol-defs.svg#icon-Logo"></use>
     </a>
     <nav class="navigation">
         <ul class="navigation__list list">
@@ -32,19 +33,31 @@
         <a href="tel:+380441111111" class="connection__tel link">+38 044 111 11 11</a>
         <button type="button" class="connection__btn btn" data-modal-open>Online-booking</button>
     </div>
-    <button type="button" class="menu-open">M</button>
+    <button type="button" class="menu-open">
+        <svg width="24" height="16" class="social__icons">
+        <use href="./img/symbol-defs.svg#icon-menu_24px"></use>
+    </button>
     </div>
     <div class="mobile-menu">
         <div class="container">
-        <button type="button" class="menu-close">X</button>
-        <nav class="mob-navigation">
-            <ul class="mob-navigation-list list">
-                <li class=""><a href="" class="mob-navigation-link current link">About</a></li>
-                <li class=""><a href="" class="mob-navigation-link link">Services and prices</a></li>
-                <li class=""><a href="" class="mob-navigation-link link">Barbers</a></li>
-                <li class=""><a href="" class="mob-navigation-link link">Contacts</a></li>
-            </ul>
-        </nav>
+       
+        <div class="menu-content">
+            <div>
+                <button type="button" class="menu-close"> 
+                    <svg width="19" height="19" class="social__icons">
+                    <use href="./img/symbol-defs.svg#icon-close_24px"></use>
+                </button>
+                <nav class="mob-navigation">
+                    <ul class="mob-navigation-list list">
+                        <li class=""><a href="" class="mob-navigation-link current link">About</a></li>
+                        <li class=""><a href="" class="mob-navigation-link link">Services and prices</a></li>
+                        <li class=""><a href="" class="mob-navigation-link link">Barbers</a></li>
+                        <li class=""><a href="" class="mob-navigation-link link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        <div>
         <div class="mob-connection">
             <a href="tel:+380441111111" class="mob-connection-tel link">+38 044 111 11 11</a>
             <button type="button" class="mob-connection-btn btn" data-modal-open>Online-booking</button>
@@ -54,7 +67,9 @@
                 <li><a href="" rel="noopener noreferrer nofollow" class="mob-social-link-links link">Instagram</a></li>
                 <li><a href="" rel="noopener noreferrer nofollow" class="mob-social-link-links link">Youtube</a></li>
             </ul>
-            </div>
+        </div>
+        </div>
+        </div>
         </div>
     </div>
     </header>
@@ -446,5 +461,6 @@
         AOS.init();
       </script>
       <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
 </body>
 </html>
