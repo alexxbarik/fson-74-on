@@ -658,6 +658,7 @@ header {
 .prices-list-wrap {
   display: flex;
   gap: 30px;
+  outline: 1px solid white;
 }
 
 .prices-list {
