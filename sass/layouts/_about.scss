@@ -1,36 +1,92 @@
 .about{
+    
+    padding: 84px 0;
+    @media screen and (min-width: 768px){
+        padding: 100px 0 56px 0;
+    }
+    @media screen and (min-width: 1200px){
     padding: 120px 0;
+    }
     & .container{
-        display: flex;
+    display: flex;
     }
 }
 
 .picture-list{
+    
+display: none;
+@media screen and (min-width: 768px){
+    display: block;
+   
+}
+@media screen and (min-width: 1200px){
     display: flex;
 }
+}
+
 .about__elements-wrap{
-    margin-left: 30px;
+    margin-left: 0;
+    @media screen and (min-width: 768px){
+        margin-left: 30px; 
+    }
+}
+.picture-list__items{
+    width: 330px;
+    height: 235px;
+    @media screen and (min-width: 1200px){
+        display: block;
+        width: 100%;
+        height: 445px;
+    }
 }
 .picture-list__items:not(:last-child){
-    margin-right: 30px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px){
+       margin-bottom: 0;
+        margin-right: 30px;
+    }
 }
+
 .elements-wrap__pre-title {
 // color: var(--primari-header-color);
 margin-bottom: var(--main-margin);   
 }
 .title{
     font-family: 'Raleway', sans-serif;
-    font-size: 42px;
-    line-height: 1.18;
     letter-spacing: 0.05em;
 }
 .elements-wrap__title {
-color: var(--primari-header-color);
-margin-bottom: var(--main-margin);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    max-width: 306px;
+    color: var(--primari-header-color);
+    margin-bottom: var(--main-margin);
+    @media screen and (min-width: 768px){
+        max-width: 330px;
+     } 
+     @media screen and (min-width: 1200px){
+        max-width: 470px;
+        font-size: 42px;
+        line-height: 1.17;
+     } 
 }
 .elements-wrap__after-title {
     color: #555555;
-    margin-bottom: var(--main-margin);    
+    margin-bottom: var(--main-margin);
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.02em;
+    max-width: 418px; 
+    @media screen and (min-width: 768px){
+       max-width: 330px;
+    }
+    @media screen and (min-width: 1200px){
+        max-width: 470px;
+        font-size: 18px;
+        line-height: 1.67;
+     }     
 }
 .elements-wrap__text {
     font-size: 14px;
@@ -38,6 +94,14 @@ margin-bottom: var(--main-margin);
     letter-spacing: 0.02em;
     color: #555555;
     margin-bottom: 42px;
+    max-width: 418px;
+    @media screen and (min-width: 768px){
+        margin-bottom: 77px;
+    }
+    @media screen and (min-width: 1200px){
+       margin-bottom: 42px;
+       max-width: 470px;
+     }   
 }
 .elements-wrap__btn {
 color: var(--primari-header-color);
