@@ -630,7 +630,7 @@ header {
 }
 
 .prices {
-  padding: 120px 0;
+  padding: 100px 0;
   background-image: url("../img/prices_bg.png");
   background-color: #111319;
   background-repeat: no-repeat;
@@ -644,6 +644,11 @@ header {
     background-image: url(/img/prices_bg-2x.png);
   }
 }
+@media screen and (min-width: 1200px) {
+  .prices {
+    padding: 120px 0;
+  }
+}
 
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
@@ -651,25 +656,54 @@ header {
 }
 
 .prices-title {
+  font-size: 40px;
   color: var(--second-header-color);
   margin-bottom: 44px;
 }
+@media screen and (min-width: 1200px) {
+  .prices-title {
+    font-size: 42px;
+  }
+}
 
 .prices-list-wrap {
-  display: flex;
-  gap: 30px;
   outline: 1px solid white;
+}
+@media screen and (min-width: 1200px) {
+  .prices-list-wrap {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .prices-list {
+  display: none;
   padding: 30px 20px;
   flex-grow: 1;
+}
+@media screen and (min-width: 1200px) {
+  .prices-list {
+    display: block;
+  }
 }
 .prices-list.prices-list:first-child {
   background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .prices-list:last-child {
   background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.prices-list__mobile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px 30px 40px;
+  background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+@media screen and (min-width: 1200px) {
+  .prices-list__mobile {
+    display: none;
+  }
 }
 
 .prices-items {
@@ -690,10 +724,16 @@ header {
 }
 
 .prices-elements {
-  font-size: 18px;
-  line-height: 1.66;
+  font-size: 14px;
+  line-height: 1.43;
   letter-spacing: 0.02em;
   color: #9DA4BD;
+}
+@media screen and (min-width: 1200px) {
+  .prices-elements {
+    font-size: 18px;
+    line-height: 1.66;
+  }
 }
 .prices-elements.prices-elements:first-child {
   order: -1;
@@ -707,14 +747,15 @@ header {
 }
 
 .benefits {
-  padding: 120px 0;
+  padding: 84px 0;
 }
 .benefits .container {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
 }
 
 .benefits-list-wrap {
-  width: calc(50% + 15px);
   display: flex;
   justify-content: center;
 }
@@ -766,8 +807,13 @@ header {
 }
 
 .benefits-wrap {
-  padding-top: 9px;
-  padding-right: 70px;
+  padding: 0;
+}
+@media screen and (min-width: 1200px) {
+  .benefits-wrap {
+    padding-top: 9px;
+    padding-right: 70px;
+  }
 }
 
 .benefits-pre-title {
