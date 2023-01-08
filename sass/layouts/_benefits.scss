@@ -32,17 +32,24 @@
 .benefits-list{
     display: flex;
     flex-wrap: wrap;
-    width: 370px;
+    width: 100%;
+    @media screen and (min-width: 768px){
+        width: 450px;  
+     }
 }
 
 .benefits-items{
     background-color: #f7f7f7;
-    width: 170px;
+    width: 193px;
     height: 133px;
     padding: 20px 35px;
     text-align: center;
+    @media screen and (min-width: 768px){
+        width: 210px; 
+     }
     @media screen and (min-width: 1200px){
-        padding: 20px 24px; 
+        padding: 20px 24px;
+        width: 170px; 
      }
     &:nth-child(2n+1){
         margin-right: 30px;
