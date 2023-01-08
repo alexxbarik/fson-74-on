@@ -171,21 +171,23 @@
     }
     }
 
-    .contacts-items__icon{
-        fill: #FFFFFF;
-        width: 16px;
-        height: 18px;
-        background-color: aqua;
-        margin-right: 16px;
-    }
-    
+       
     .contacts-links {
+        display: flex;
+        align-items: center;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: #9DA4BD;
+    &__icon{
+        fill: currentColor;
+        margin-right: 16px;
+        background-color: transparent;
+       
+        
+    }
     }
 
     .contacts-info{
